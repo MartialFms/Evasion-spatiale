@@ -1,46 +1,34 @@
 package entities;
 
 import java.io.File;
+import jaco.mp3.player.MP3Player;
 
 public class Sound {
-	//Attributes
 	
-	private int id;
-	private String path;
-	private File file;
+	private static MP3Player mp3Player;
 
-	//Constructor
-	
-	public Sound(int id, String path, File file) {
-		this.setId(id);
-		this.setPath(path);
-		this.setFile(file);
-
+	public static void playSound() {
+		File f = new File("assets/01.mp3");
+		setMp3Player(new MP3Player(f));
+		getMp3Player().play();
 	}
 	
-	//Methods
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
+	public static void loopSound() {
+		while (!getMp3Player().isStopped()) {
+			Sound.playSound();
+		}
 	}
 	
-	public String getPath() {
-		return path;
-	}
-
-	public void setPath(String path) {
-		this.path = path;
-	}
-
-	public File getFile() {
-		return file;
-	}
-
-	public void setFile(File file) {
-		this.file = file;
+	public static void stopSound() {
+		getMp3Player().isStopped();
 	}
 	
+	public static MP3Player getMp3Player() {
+		return mp3Player;
+	}
+
+	public static void setMp3Player(MP3Player mp3Player) {
+		Sound.mp3Player = mp3Player;
+	}
+
 }
