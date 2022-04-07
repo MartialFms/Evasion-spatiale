@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/Stagiaires04P/Downloads/jaco-mp3-player-0.9.3/jaco-mp3-player-0.9.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Stagiaires04P/Downloads/jaco-mp3-player-0.9.3/jaco-mp3-player-0.9.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

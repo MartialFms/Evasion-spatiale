@@ -1,11 +1,6 @@
 package entities;
 
-import java.awt.FlowLayout;
 import java.io.File;
-
-import javax.swing.ImageIcon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 public class Images {
 	//Attributes

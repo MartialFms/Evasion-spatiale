@@ -8,7 +8,7 @@ public class Sound {
 	private static MP3Player mp3Player;
 
 	public static void playSound() {
-		File f = new File("assets/music.mp3");
+		File f = new File("src/assets/music.mp3");
 		setMp3Player(new MP3Player(f));
 		getMp3Player().play();
 	}

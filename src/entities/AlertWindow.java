@@ -79,7 +79,7 @@ public class AlertWindow {
 	}
 
 	public void displayAlertWindow() {
-		this.setPicture(new Images(1,"assets/go.gif"));
+		this.setPicture(new Images(1,"src/assets/go.gif"));
 		ImageIcon icon = new ImageIcon();
 		JLabel label = new JLabel(icon);
 		this.getPanel().setLayout(new FlowLayout());
