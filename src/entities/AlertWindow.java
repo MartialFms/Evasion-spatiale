@@ -56,6 +56,7 @@ public class AlertWindow {
 		this.getButton().setText("OK !");
 		this.getButton().addActionListener(e -> {
 	    frame.dispose();
+	    Sound.stopSound();
 		});
 
 	}
@@ -78,7 +79,6 @@ public class AlertWindow {
 	}
 
 	public void displayAlertWindow() {
-		
 		this.setPicture(new Images(1,"assets/go.gif"));
 		ImageIcon icon = new ImageIcon();
 		JLabel label = new JLabel(icon);
@@ -86,6 +86,7 @@ public class AlertWindow {
 		label.setIcon(new ImageIcon(this.getPicture().getPath()));
 		this.getPanel().add(label);
 		this.getFrame().setVisible(true);
+		Sound.playSound();
 		}
 
 	public Sound getSound() {
