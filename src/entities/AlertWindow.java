@@ -1,12 +1,12 @@
 package entities;
 
 import java.awt.FlowLayout;
-import java.io.File;
 import java.util.Random;
 
-
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class AlertWindow {
@@ -16,8 +16,8 @@ public class AlertWindow {
 	private JFrame frame;
 	private JButton button;
 	private JPanel panel;
-	private File picture;
-	private File sound;
+	private Images picture;
+	private Sound sound;
 
 	// Constructor
 
@@ -69,48 +69,30 @@ public class AlertWindow {
 		this.panel = panel;
 	}
 
-	public File getPicture() {
+	public Images getPicture() {
 		return picture;
 	}
 
-	public void setPicture(File picture) {
+	public void setPicture(Images picture) {
 		this.picture = picture;
 	}
 
 	public void displayAlertWindow() {
+		
+		this.setPicture(new Images(1,"assets/go.gif"));
+		ImageIcon icon = new ImageIcon();
+		JLabel label = new JLabel(icon);
+		this.getPanel().setLayout(new FlowLayout());
+		label.setIcon(new ImageIcon(this.getPicture().getPath()));
+		this.getPanel().add(label);
 		this.getFrame().setVisible(true);
 		}
 
-	public File getSound() {
+	public Sound getSound() {
 		return sound;
 	}
 
-	public void setSound(File sound) {
+	public void setSound(Sound sound) {
 		this.sound = sound;
 	}
 }
-
-//		Random r = new Random();
-//		int x = r.nextInt();
-//		int y = r.nextInt();
-//		JFrame frame = new JFrame("Back to work !");
-//		JPanel panel = new JPanel();
-//		panel.setLayout(new FlowLayout());
-//		
-//
-//		JButton button = new JButton();
-//		button.setText("OK !");
-//		button.addActionListener(e -> {
-//			frame.dispose();
-//		});
-//
-//		panel.add(button);
-//		frame.add(panel);
-//		frame.setSize(300, 400);
-//		frame.setAlwaysOnTop(true);
-//		frame.setLocationRelativeTo(null);
-//		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//		frame.setVisible(true);
-//	}
-
-//}

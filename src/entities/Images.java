@@ -52,12 +52,12 @@ public class Images {
 		this.file = file;
 	}
 	
-	public void showPicture(File file) {
-		ImageIcon icon = new ImageIcon();
-		JLabel label = new JLabel(icon);
-		JPanel panel = new JPanel();
-		panel.setLayout(new FlowLayout());
-		label.setIcon(new ImageIcon(this.getPath()));
+	public void showPicture() {
+//		ImageIcon icon = new ImageIcon();
+//		JLabel label = new JLabel(icon);
+//		JPanel panel = new JPanel();
+//		panel.setLayout(new FlowLayout());
+//		label.setIcon(new ImageIcon(this.getPath()));
 		
 	}
 	

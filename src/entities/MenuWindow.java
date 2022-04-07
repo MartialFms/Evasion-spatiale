@@ -71,7 +71,7 @@ public class MenuWindow {
 		
 		this.buttonClose = buttonClose;
 		this.getButtonClose().setText("Close");
-		this.getButtonClose().addActionListener(e->{this.getFrame().dispose();});
+		this.getButtonClose().addActionListener(e->{System.exit(0);});
 	}
 
 	public JPanel getPanel() {
@@ -88,7 +88,7 @@ public class MenuWindow {
 	
 	public void startAlert() {
 		
-		System.out.println("Ceci est une alerte");
+		new TaskAlert().run();
 	}
 	
 }
