@@ -1,8 +1,13 @@
 package entities;
 
+import java.awt.FlowLayout;
 import java.io.File;
 
-public class Image {
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Images {
 	//Attributes
 	
 	private int id;
@@ -11,10 +16,15 @@ public class Image {
 
 	//Constructor
 	
-	public Image(int id, String path, File file) {
+	public Images(int id, String path, File file) {
 		this.setId(id);
 		this.setPath(path);
 		this.setFile(file);
+	}
+	
+	public Images(int id, String path) {
+		this.setId(id);
+		this.setPath(path);
 	}
 	
 	//Methods
@@ -40,6 +50,15 @@ public class Image {
 
 	public void setFile(File file) {
 		this.file = file;
+	}
+	
+	public void showPicture(File file) {
+		ImageIcon icon = new ImageIcon();
+		JLabel label = new JLabel(icon);
+		JPanel panel = new JPanel();
+		panel.setLayout(new FlowLayout());
+		label.setIcon(new ImageIcon(this.getPath()));
+		
 	}
 	
 }
