@@ -6,13 +6,15 @@ public class Image {
 	//Attributes
 	
 	private int id;
+	private String path;
 	private File file;
 
 	//Constructor
 	
-	public Image(int id, File file) {
-		this.setFile(file);
+	public Image(int id, String path, File file) {
 		this.setId(id);
+		this.setPath(path);
+		this.setFile(file);
 	}
 	
 	//Methods
@@ -22,6 +24,14 @@ public class Image {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 	public File getFile() {
