@@ -3,7 +3,7 @@ package entities;
 import java.awt.FlowLayout;
 import java.io.File;
 import java.util.Random;
-import java.util.Timer;
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 public class AlertWindow {
 
 	// Attributes
-
+	Random r = new Random();
 	private JFrame frame;
 	private JButton button;
 	private JPanel panel;
@@ -29,18 +29,22 @@ public class AlertWindow {
 		this.getPanel().add(this.getButton());
 		this.getFrame().add(this.getPanel());
 		this.getFrame().setSize(300, 400);
-		this.getFrame().setLocationRelativeTo(null);
+		this.frame.setLocation(r.nextInt(1200), r.nextInt(500));
 		this.getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	
 	}
 
-	public JFrame getFrame() {
-		
+	// Methods
+	
+	public JFrame getFrame() {	
 		return frame;
 	}
 
 	public void setFrame(JFrame frame) {
+	
 		this.frame = frame;
+		
+		
 	}
 
 	public JButton getButton() {
@@ -61,6 +65,7 @@ public class AlertWindow {
 	}
 
 	public void setPanel(JPanel panel) {
+		
 		this.panel = panel;
 	}
 
